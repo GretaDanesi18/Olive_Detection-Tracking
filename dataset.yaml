@@ -1,7 +1,7 @@
 #path
-train: ../yolov5/Olive_Detection_Tracking/Dataset/images/train/
-val : ../yolov5/Olive_Detection_Tracking/Dataset/images/val/
-test : ../yolov5/Olive_Detection_Tracking/Dataset/images/test/
+train: ../yolov5/Olive_Detection_Tracking/images/train/
+val : ../yolov5/Olive_Detection_Tracking/images/val/
+test : ../yolov5/Olive_Detection_Tracking/images/test/
 
 #numero classi
 nc : 1
