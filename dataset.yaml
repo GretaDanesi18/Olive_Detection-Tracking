@@ -1,0 +1,10 @@
+#path
+train: ../yolov5/Olive_Detection_Tracking/Dataset/images/train/
+val : ../yolov5/Olive_Detection_Tracking/Dataset/images/val/
+test : ../yolov5/Olive_Detection_Tracking/Dataset/images/test/
+
+#numero classi
+nc : 1
+
+#nome classi
+names : ['olive']
