@@ -23,7 +23,9 @@ def get_frame_types(video_fn):
 
 def save_i_keyframes(video_fn):
     frame_types = get_frame_types(video_fn)
-    name = video_fn.split('.')[0]
+    name = video_fn.split('/')[1].split('.')[0]
+    print(name)
+    print('-------------------------')
     i_frames = [x[0] for x in frame_types if x[1]=='I']
     if i_frames:
         cap = cv2.VideoCapture(video_fn)
