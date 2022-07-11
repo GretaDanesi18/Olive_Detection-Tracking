@@ -24,20 +24,18 @@ def save_i_keyframes(video_fn):
     frame_types = get_frame_types(video_fn)
     name = video_fn.split('/')[1].split('.')[0]
     print(name)
-<<<<<<< HEAD
-    print('---------------------------------')
-=======
     print('-------------------------')
->>>>>>> 38ec0473e94b13f9a659fa25ba0dc0fe0202a13b
     i_frames = [x[0] for x in frame_types if x[1]=='I']
     if i_frames:
         cap = cv2.VideoCapture(video_fn)
+        frame_num = 1
         for frame_no in i_frames:
             cap.set(cv2.CAP_PROP_POS_FRAMES, frame_no)
             ret, frame = cap.read()
-            outname = 'frame_video/'+str(name)+'_frame_'+str(frame_no)+'.jpg'
+            outname = 'frame_video/'+str(name)+'_frame_'+str(frame_num)+'.jpg'
             cv2.imwrite(outname, frame)
             print ('Saved: '+outname)
+            frame_num +=1
         cap.release()
     else:
         print ('No I-frames in '+video_fn)
