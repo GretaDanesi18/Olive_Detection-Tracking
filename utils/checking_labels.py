@@ -34,6 +34,6 @@ def checking_labels(dir_name):
                 shutil.copyfile(source,destination)
 
 if __name__ == '__main__':  
-    checking_labels('frame_video1')
+    checking_labels('dataset_video/frame_video/frame_video1')
 
 
