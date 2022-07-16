@@ -14,26 +14,31 @@ https://github.com/Lio320/GraphTracking.git
 
 # <strong> Struttura repository <strong>
 
+```
 * dataset_video
-    +----frame_video
+    +---frame_video
         +---frame_video1
             +---frame_0001.jpg
 
             +---frame_000n.jpg
 
         +---frame_videon
-    +----videos
+    +---videos
         +---video1.mp4
         +---videon.mp4
+```
 
 La cartella videos contiene i file video da cui vengono estratti i frame su cui costruire il proprio dataset.
 
 I frame vengono estratti con il file frame_extraction.py che si può trovare nella cartella utils e poi inseriti nei rispettivi path di frame_video.
 
+
+```
 * source_detector
     +---YOLOv5_SDet.ipynb
     +---source_dataset.yaml
     +---dataset_source
+```
 
 YOLOv5_SDet.ipynb è un notebook di colab che contiene il codice per la rete YOLO addestrata tramite il dataset source.
 Tutti gli step che riguardano il source detector sono illustrati nel file.
@@ -42,21 +47,25 @@ dataset_source è un dataset iniziale le cui labels sono state create manualment
 
 source_dataset.yaml è il file yaml della rete YOLO che contiene il path al dataset di train e validation.
 
+```
 * target_detector
     +---YOLOv5_TDet.ipynb
     +---target_dataset.yaml
     +---test_dataset
             +---images
             +---labels
+```
 
 YOLOv5_TDet.ipynb è un notebook di colab che contiene il codice per la rete YOLO addestrata tramite le pseudo_labels.
 Tutti gli step che riguardano il target detector sono illustrati nel file.
 
 test_dataset è stato creato da alcuni frame del video2 e viene usato per testare la rete del target detector.
 
+```
 * utils
     +---frame_extraction.py
     +---checking_labels.py
+```
 
 frame_extraction.py viene utilizzato per estrarre i frame dai video.
 
