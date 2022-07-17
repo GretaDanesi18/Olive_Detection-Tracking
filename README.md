@@ -71,3 +71,20 @@ frame_extraction.py viene utilizzato per estrarre i frame dai video.
 
 checking_labels.py viene utilizzato sui risultati della detection (detec.py) del source detector in modo tale da: utilizzare solo le immagini con il corrispondente file txt e riordinare i file.
 
+# <strong> Step principali </strong>
+
+* <strong> Eseguire YOLOv5_SDet.ipynb </strong>
+
+* Al termine dell'esecuzione di YOLOv5_SDet.ipynb avremo delle cartelle zip:
+    * source_detection_results.zip
+    * source_detection_labels.zip
+  le quali contengono le immagini e labels ottenute dalla detection effettuata sui frame di video1.
+
+* Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels
+* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels
+
+*
+
+
+
+
