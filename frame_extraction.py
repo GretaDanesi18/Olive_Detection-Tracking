@@ -2,6 +2,8 @@
 import os
 import cv2
 
+#modificare i path in base alle proprie directory
+
 file_path_1 = "../Olive_Detection_Tracking/dataset_video/videos/video1.mp4"
 file_path_2 = "../Olive_Detection_Tracking/dataset_video/videos/video2.mp4"
 
