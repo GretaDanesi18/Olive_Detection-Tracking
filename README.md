@@ -62,14 +62,14 @@ Tutti gli step che riguardano il target detector sono illustrati nel file.
 test_dataset è stato creato da alcuni frame del video2 e viene usato per testare la rete del target detector.
 
 ```
-utils
-    +---frame_extraction.py
-    +---checking_labels.py
+frame_extraction.py
+
+checking_labels.py
 ```
 
 frame_extraction.py viene utilizzato per estrarre i frame dai video.
 
-checking_labels.py viene utilizzato sui risultati della detection (detec.py) del source detector in modo tale da: utilizzare solo le immagini con il corrispondente file txt e riordinare i file.
+checking_labels.py viene utilizzato sui risultati della detection (detect.py) del source detector in modo tale da utilizzare solo le immagini con il corrispondente file txt e riordinare i file.
 
 # <strong> Step principali </strong>
 
@@ -80,10 +80,18 @@ checking_labels.py viene utilizzato sui risultati della detection (detec.py) del
     * source_detection_labels.zip
   le quali contengono le immagini e labels ottenute dalla detection effettuata sui frame di video1.
 
-* Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels
-* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels
+* Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels"
+* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels-py basta eseguire il seguente comando
 
-*
+```
+python3 checking_labels.py
+
+```
+* Dopo aver eseguito checking_labell.py otteniamo una directory strutturata in questo modo:
+    dataset_olive
+        +--images
+        +--labels
+  queste directory costituiscono il path image e il path labels del file GraphTracking/config/config_features_labels.yaml contenuta nella repo https://github.com/Lio320/GraphTracking.git
 
 
 
