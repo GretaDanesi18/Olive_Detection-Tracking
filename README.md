@@ -54,12 +54,31 @@ target_detector
     +---test_dataset
             +---images
             +---labels
+    +---pseudo_labels_dataset
+        +---feature_labels
+            +---results_2
+                +---images
+                +---labels
+            +---results_5
+                +---images
+                +---labels
+        +---SfmLabels
+            +---results_2
+                +---images
+                +---labels
+            +---results_5
+                +---images
+                +---labels
+
 ```
 
 YOLOv5_TDet.ipynb è un notebook di colab che contiene il codice per la rete YOLO addestrata tramite le pseudo_labels.
 Tutti gli step che riguardano il target detector sono illustrati nel file.
 
 test_dataset è stato creato da alcuni frame del video2 e viene usato per testare la rete del target detector.
+
+pseudo_labels_dataset contiene i risultati generati dai seguenti file : Generate_Feature_Labels.py Generate_Sfm_Labels.py
+Il path delle directory di pseudo_labels_dataset costituisce il paht result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git. 
 
 ```
 frame_extraction.py
@@ -81,7 +100,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
   le quali contengono le immagini e labels ottenute dalla detection effettuata sui frame di video1.
 
 * Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels"
-* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels-py basta eseguire il seguente comando
+* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels.py basta eseguire il seguente comando
 
     ```
     python3 checking_labels.py
@@ -95,7 +114,15 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
         +--labels
     
     ```
-  queste directory costituiscono il path image e il path label del file GraphTracking/config/config_features_labels.yaml contenuta nella repo https://github.com/Lio320/GraphTracking.git
+  queste directory costituiscono il path image e il path label del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
+
+* Eseguiamo Generate_Feature_Labels.py per generare pseudo-labels con l'algoritmo di SURF
+* Eseguiamo Generate_Sfm_Labels.py per generare pseudo-labels con Structure from Motion (SfM)
+
+Per maggiori informazioni fare riferimento al README.md della repo https://github.com/Lio320/GraphTracking.git.
+
+
+
 
 
 
