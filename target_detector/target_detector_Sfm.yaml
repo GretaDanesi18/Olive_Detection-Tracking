@@ -1,7 +1,7 @@
 #path
-train: ../yolov5/Olive_Detection_Tracking/Pseudo_Labels/images/train/
-val : ../yolov5/Olive_Detection_Tracking/Pseudo_Labels/images/val/
-test : ../yolov5/Olive_Detection_Tracking/Pseudo_Labels/images/test/
+train: ../yolov5/Olive_Detection_Tracking/Pseudo_Labels/Sfm/images/train/
+val : ../yolov5/Olive_Detection_Tracking/Pseudo_Labels/Sfm/images/val/
+test : ../yolov5/Olive_Detection_Tracking/target_detector/test_dataset/images
 
 #numero classi
 nc : 1
