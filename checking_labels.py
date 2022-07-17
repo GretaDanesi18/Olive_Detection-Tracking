@@ -26,37 +26,50 @@ def checking_labels(dir_name):
         exit()
 
 
-    lista_frames = os.listdir(path_frame)
-    lista_labels = os.listdir(path_labels)
-
-
+    lista_frames = sorted(os.listdir(path_frame))
+    #print(lista_frames)
+    lista_labels = sorted(os.listdir(path_labels))
+    #print(lista_labels)
     num= 1
 
 
-    for frames in lista_frames:
-        print(frames)
-        name = frames.split('.')[0]
-        print(name)
-        file_txt = name+'.txt'
-        print(file_txt)
+    for labels in lista_labels:
+        #print(labels)
+        name = labels.split('.')[0]
+        #print(name)
+        file_jpg = name+'.jpg'
+        #print(file_jpg)
 
-
-        for labels in lista_labels:
-            if labels == file_txt:
-                source_img = path_frame+'/'+frames
-                img = cv2.imread(source_img)
-                print(source_img)
-                destination_img = path_image+'/'+'frame_'+str(num).zfill(4)+'.jpg'
-                print(destination_img)
-                cv2.imwrite(destination_img,img)
+        for frames in lista_frames:
+            #print(frames)
+            if frames == file_jpg:
 
                 source_txt = path_labels+'/'+labels
-                print(source_txt)
-                destination_txt = path_new_labels+'/'+'frame_'+str(num).zfill(4)+'.txt'
-                print(destination_img)
-                open(destination_txt,'w').write(source_txt)
+                #print(source_txt)
+                file_read= open(source_txt, "r").read()
+                print(file_read)
+                num_righe= len(open(source_txt, "r").readlines())
+
+                if num_righe >= 2:
+                    destination_txt = path_new_labels+'/'+'frame_'+str(num).zfill(4)+'.txt'
+                    print(destination_txt)
+                    file_write = open(destination_txt, 'w')
+                    file_write.write(file_read)
+                    print('Label '+str(num).zfill(4)+' copiata')
+
+                    source_img = path_frame+'/'+frames
+                    #print(source_img)
+                    img = cv2.imread(source_img)
+                    #print(img)
+                    destination_img = path_image+'/'+'frame_'+str(num).zfill(4)+'.jpg'
+                    #print(destination_img)
+                    cv2.imwrite(destination_img,img)
+                    print('Immagine '+str(num).zfill(4)+' copiata')
+                
                
-                num +=1
+                    num +=1
+                else:
+                    break
 
                 
 
