@@ -83,15 +83,19 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
 * Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels"
 * Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels-py basta eseguire il seguente comando
 
-```
-python3 checking_labels.py
+    ```
+    python3 checking_labels.py
 
-```
-* Dopo aver eseguito checking_labell.py otteniamo una directory strutturata in questo modo:
+    ```
+* Dopo aver eseguito checking_labels.py otteniamo una directory strutturata in questo modo:
+
+    ```
     dataset_olive
         +--images
         +--labels
-  queste directory costituiscono il path image e il path labels del file GraphTracking/config/config_features_labels.yaml contenuta nella repo https://github.com/Lio320/GraphTracking.git
+    
+    ```
+  queste directory costituiscono il path image e il path label del file GraphTracking/config/config_features_labels.yaml contenuta nella repo https://github.com/Lio320/GraphTracking.git
 
 
 
