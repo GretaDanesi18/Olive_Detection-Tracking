@@ -1,5 +1,6 @@
+from asyncore import write
 import os
-import shutil
+import cv2
 
 #modificare i path in base alle proprie directory
 
@@ -43,16 +44,17 @@ def checking_labels(dir_name):
         for labels in lista_labels:
             if labels == file_txt:
                 source_img = path_frame+'/'+frames
+                img = cv2.imread(source_img)
                 print(source_img)
                 destination_img = path_image+'/'+'frame_'+str(num).zfill(4)+'.jpg'
                 print(destination_img)
-                shutil.copyfile(source_img,destination_img)
+                cv2.imwrite(destination_img,img)
 
                 source_txt = path_labels+'/'+labels
                 print(source_txt)
                 destination_txt = path_new_labels+'/'+'frame_'+str(num).zfill(4)+'.txt'
                 print(destination_img)
-                shutil.copyfile(source_txt,destination_txt)
+                open(destination_txt,'w').write(source_txt)
                
                 num +=1
 
