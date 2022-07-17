@@ -1,9 +1,11 @@
 import os
 import shutil
 
+#modificare i path in base alle proprie directory
+
 def checking_labels(dir_name):
     path_frame = dir_name
-    path_labels ='../detection_results/detection_labels'
+    path_labels ='../detection_labels/labels'
     path_image = '../dataset_olive/images'
     path_new_labels = '../dataset_olive/labels' 
 
@@ -57,6 +59,6 @@ def checking_labels(dir_name):
                 
 
 if __name__ == '__main__':  
-    checking_labels('../dataset_video/frame_video/frame_video1')
+    checking_labels('../Olive_Detection_Tracking/dataset_video/frame_video/frame_video1')
 
 
