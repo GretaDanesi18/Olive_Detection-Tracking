@@ -87,6 +87,7 @@ test_dataset è un dataset composto da alcuni frame del video2 le cui labels son
 Questo dataset viene usato per testare la rete del target detector.
 
 pseudo_labels_dataset contiene i risultati generati dai seguenti file : <strong> Generate_Feature_Labels.py </strong> e <strong> Generate_Sfm_Labels.py </strong>
+
 Il path delle directory di pseudo_labels_dataset costituisce il paht result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git. 
 
 ```
