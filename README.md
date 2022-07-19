@@ -99,7 +99,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
 
 ## <strong> Step principali </strong>
 
-* Eseguire YOLOv5_SDet.ipynb
+* Eseguire <strong> YOLOv5_SDet.ipynb </strong> 
 
 * Al termine dell'esecuzione di YOLOv5_SDet.ipynb avremo delle cartelle zip:
     * source_detection_results.zip
@@ -107,7 +107,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
   le quali contengono le immagini e labels ottenute dalla detection effettuata sui frame di video1.
 
 * Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels"
-* Eseguiamo checking_lables.py cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels.py basta eseguire il seguente comando
+* Eseguiamo <strong> checking_lables.py </strong> cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels.py basta eseguire il seguente comando
 
     ```
     python3 checking_labels.py
@@ -118,17 +118,16 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
     dataset_olive
         +--images
         +--labels
-    
     ```
   queste directory costituiscono il path image e il path label del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
 
-* Eseguiamo Generate_Feature_Labels.py per generare pseudo-labels con l'algoritmo di SURF
-* Eseguiamo Generate_Sfm_Labels.py per generare pseudo-labels con Structure from Motion (SfM)
+* Eseguiamo <strong> Generate_Feature_Labels.py </strong> per generare pseudo-labels con l'algoritmo di SURF
+* Eseguiamo <strong> Generate_Sfm_Labels.py </strong> per generare pseudo-labels con Structure from Motion (SfM)
 Per maggiori informazioni fare riferimento al README.md della repo https://github.com/Lio320/GraphTracking.git.
 
-*Al termine dell'esecuzione di questi due file otteniamo la cartella pseudo_labels_dataset con cui addestriamo il target detector.
-*Eseguiamo YOLOv5_TDet.ipynb
-*Dopo aver eseguito il target detector possiamo esportare/visualizzare i risultati e trarre le relative conclusioni  
+* Al termine dell'esecuzione di questi due file otteniamo la cartella pseudo_labels_dataset con cui addestriamo il target detector.
+* Eseguiamo <strong> YOLOv5_TDet.ipynb </strong>
+* Dopo aver eseguito il target detector possiamo esportare/visualizzare i risultati e trarre le relative conclusioni.  
 
 
 
