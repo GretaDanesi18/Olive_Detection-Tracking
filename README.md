@@ -125,7 +125,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
 * Eseguiamo <strong> Generate_Feature_Labels.py </strong> per generare pseudo-labels con l'algoritmo di SURF
 * Eseguiamo <strong> Generate_Sfm_Labels.py </strong> per generare pseudo-labels con Structure from Motion (SfM)
  
-Per maggiori informazioni fare riferimento al README.md della repo https://github.com/Lio320/GraphTracking.git.
+    Per maggiori informazioni fare riferimento al README.md della repo https://github.com/Lio320/GraphTracking.git.
 
 * Al termine dell'esecuzione di questi due file otteniamo la cartella pseudo_labels_dataset con cui addestriamo il target detector.
 * Eseguiamo <strong> YOLOv5_TDet.ipynb </strong>
