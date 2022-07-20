@@ -109,7 +109,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
   le quali contengono le immagini e labels ottenute dalla detection effettuata sui frame di video1.
 
 * Estraimo le labels dalla cartella zip e le salvo in una cartella "detection_labels"
-* Eseguiamo <strong> checking_labels.py </strong> cosi da ottenere il dataset di immagini e labels con cui generare le psuedo-labels, per lanciare checking_labels.py basta eseguire il seguente comando
+* Eseguiamo <strong> checking_labels.py </strong> cosi da ottenere il dataset di immagini e labels con cui generare le pseudo-labels, per lanciare checking_labels.py basta eseguire il seguente comando
 
     ```
     python3 checking_labels.py
