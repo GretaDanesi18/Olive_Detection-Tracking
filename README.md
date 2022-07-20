@@ -59,9 +59,6 @@ target_detector
     +---YOLOv5_TDet.ipynb
     +---target_detector_features.yaml
     +---target_detector_Sfm.yaml
-    +---test_dataset
-            +---images
-            +---labels
     +---pseudo_labels_dataset
         +---feature_labels
             +---results_2
@@ -83,12 +80,18 @@ target_detector
 YOLOv5_TDet.ipynb è un notebook di colab che contiene il codice per la rete YOLOv5 addestrata tramite le pseudo-labels.
 Tutti gli step che riguardano il target detector sono illustrati nel file.
 
-test_dataset è un dataset composto da alcuni frame del video2 le cui labels sono state create manualmente tramite software LabelImg.
-Questo dataset viene usato per testare la rete del target detector.
-
 pseudo_labels_dataset contiene i risultati generati dai seguenti file : <strong> Generate_Feature_Labels.py </strong> e <strong> Generate_Sfm_Labels.py </strong>
 
-Il path delle directory di pseudo_labels_dataset costituisce il paht result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git. 
+Il path delle directory di pseudo_labels_dataset costituisce il paht result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
+
+```
+    +---test_dataset
+            +---images
+            +---labels
+            
+```
+test_dataset è un dataset composto da alcuni frame del video2 le cui labels sono state create manualmente tramite software LabelImg.
+Questo dataset viene usato per testare la rete del target detector.
 
 ```
 frame_extraction.py
