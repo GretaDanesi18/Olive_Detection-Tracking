@@ -1,4 +1,4 @@
-## <strong> Olive_Detection </strong>
+## <strong> Olive_Detection_Tracking </strong>
 
 L'obiettivo è quello di realizzare una rete neurale in grado di eseguire la detection delle olive attraverso l'utilizzo di pseudo labels ovvero labels generate automaticamente da video, cosi da non dover etichettare manualmente le immagini del dataset.
 Infatti uno dei limiti delle rete neurali è la creazione di una dataset per ogni specifico problema e il dispendio temporale che ciò comporta.
