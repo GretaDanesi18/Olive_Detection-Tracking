@@ -120,7 +120,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
 * Dopo aver eseguito checking_labels.py otteniamo una directory strutturata in questo modo:
 
     ```
-    dataset_olive
+    dataset_detection
         +--images
         +--labels
     ```
