@@ -14,6 +14,35 @@ https://github.com/Lio320/GraphTracking.git
 ## <strong> Struttura repository </strong>
 
 ```
+olive_tracking
+    +---ModelText
+        +---points3D.txt
+        +---images.txt
+        +---cameras.txt
+
+    +---olive_tracking_YOLO
+        +---images
+            +---image1.jpg
+            +---image2.jpg
+            +---imagen.jpg
+        +---labels
+            +---label1.txt
+            +---label2.txt
+            +---labeln.txt
+        
+    +---olive_tracking_MOT
+        +---images
+            +---image1.jpg
+            +---image2.jpg
+            +---imagen.jpg
+        +---labels
+            +---gt.txt
+            +---labels.txt
+
+```
+
+
+```
 dataset_video
     +---frame_video
         +---frame_video1
