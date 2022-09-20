@@ -130,7 +130,7 @@ frame_extraction.py viene utilizzato per estrarre i frame dai video.
 
 checking_labels.py viene utilizzato sui risultati della detection (detect.py) del source detector in modo tale da utilizzare solo le immagini con il corrispondente file txt e riordinare i file.
 
-## <strong> Step principali </strong>
+## <strong> Step principali Detection </strong>
 
 * Eseguire <strong> YOLOv5_SDet.ipynb </strong> 
 
@@ -152,7 +152,7 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
         +--images
         +--labels
     ```
-  queste directory costituiscono il path image e il path label del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
+  queste directory costituiscono il path image e il path label del file GraphTracking/Config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
 
 * Eseguiamo <strong> Generate_Feature_Labels.py </strong> per generare pseudo-labels con l'algoritmo di SURF
 * Eseguiamo <strong> Generate_Sfm_Labels.py </strong> per generare pseudo-labels con Structure from Motion (SfM)
@@ -163,7 +163,11 @@ checking_labels.py viene utilizzato sui risultati della detection (detect.py) de
 * Eseguiamo <strong> YOLOv5_TDet.ipynb </strong>
 * Dopo aver eseguito il target detector possiamo esportare/visualizzare i risultati e trarre le relative conclusioni. 
 
+## <strong> Step principali Tracking </strong>
 
+* Configurare il file GraphTracking/Config/config_track.yaml con i path della directory olive_tracking
+* Eseguire il file <strong> Bboxes_Tracking.py </strong> 
+* Al termine dell'esecuzione otteniamo le immagini con i bounding box ognuno con il proprio ID. 
 
 
 N.B Prima di eseguire i file controllare che i path all' interno dei codice corrispondano ai path della propria directory , in caso contrario modificarli.
