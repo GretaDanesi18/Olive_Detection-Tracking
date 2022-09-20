@@ -40,6 +40,8 @@ olive_tracking
             +---labels.txt
 
 ```
+La cartella olive_tracking contiene il materiale necessario ad eseguire il tracking tramite il file <strong> Bboxes_Tracker.py </strong>.
+In particolare, in ModelText ci sono i file txt generati tramite COLMAP mentre in olive_tracking_YOLO ci sono le labels e le immagini etichettate tramite CVAT per il tracker.
 
 
 ```
@@ -108,7 +110,7 @@ Tutti gli step che riguardano il target detector sono illustrati nel file.
 
 pseudo_labels_dataset contiene i risultati generati dai seguenti file : <strong> Generate_Feature_Labels.py </strong> e <strong> Generate_Sfm_Labels.py </strong>
 
-Il path delle directory di pseudo_labels_dataset costituisce il paht result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
+Il path delle directory di pseudo_labels_dataset costituisce il path result del file GraphTracking/config/config_features_labels.yaml e del file GraphTracking/config/config_sfm_labels.yaml contenuti nella repo https://github.com/Lio320/GraphTracking.git.
 
 ```
     +---test_dataset
