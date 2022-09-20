@@ -88,7 +88,7 @@ Il path delle directory di pseudo_labels_dataset costituisce il paht result del 
             
 ```
 test_dataset è un dataset composto da alcuni frame del video2 le cui labels sono state create manualmente tramite software LabelImg.
-Questo dataset viene usato per testare la rete del target detector.
+Questo dataset viene usato per testare le due reti di detection.
 
 ```
 frame_extraction.py
