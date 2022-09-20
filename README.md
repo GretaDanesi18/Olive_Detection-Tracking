@@ -60,19 +60,16 @@ target_detector
     +---target_detector_features.yaml
     +---target_detector_Sfm.yaml
     +---pseudo_labels_dataset
+        +---images
         +---feature_labels
             +---results_2
-                +---images
                 +---labels
             +---results_5
-                +---images
                 +---labels
         +---SfmLabels
             +---results_2
-                +---images
                 +---labels
             +---results_5
-                +---images
                 +---labels
 
 ```
