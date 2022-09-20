@@ -41,6 +41,7 @@ olive_tracking
 
 ```
 La cartella olive_tracking contiene il materiale necessario ad eseguire il tracking tramite il file <strong> Bboxes_Tracker.py </strong> contenuto all'interno della repo https://github.com/Lio320/GraphTracking.git
+
 In particolare, in ModelText ci sono i file txt generati tramite COLMAP mentre in olive_tracking_YOLO ci sono le labels e le immagini etichettate tramite CVAT per il tracker.
 
 
@@ -79,6 +80,7 @@ source_detector
 ```
 
 YOLOv5_SDet.ipynb è un notebook di google colab che contiene il codice per la rete YOLOv5 addestrata tramite il dataset source.
+
 Tutti gli step che riguardano il source detector sono illustrati nel file.
 
 dataset_source è un dataset iniziale le cui labels sono state create manualmente tramite il software LabelImg.
@@ -106,6 +108,7 @@ target_detector
 ```
 
 YOLOv5_TDet.ipynb è un notebook di colab che contiene il codice per la rete YOLOv5 addestrata tramite le pseudo-labels.
+
 Tutti gli step che riguardano il target detector sono illustrati nel file.
 
 pseudo_labels_dataset contiene i risultati generati dai seguenti file : <strong> Generate_Feature_Labels.py </strong> e <strong> Generate_Sfm_Labels.py </strong>
@@ -119,6 +122,7 @@ Il path delle directory di pseudo_labels_dataset costituisce il path result del 
             
 ```
 test_dataset è un dataset composto da alcuni frame del video2 le cui labels sono state create manualmente tramite software LabelImg.
+
 Questo dataset viene usato per testare le due reti di detection.
 
 ```
