@@ -40,7 +40,7 @@ olive_tracking
             +---labels.txt
 
 ```
-La cartella olive_tracking contiene il materiale necessario ad eseguire il tracking tramite il file <strong> Bboxes_Tracker.py </strong>.
+La cartella olive_tracking contiene il materiale necessario ad eseguire il tracking tramite il file <strong> Bboxes_Tracker.py </strong> contenuto all'interno della repo https://github.com/Lio320/GraphTracking.git
 In particolare, in ModelText ci sono i file txt generati tramite COLMAP mentre in olive_tracking_YOLO ci sono le labels e le immagini etichettate tramite CVAT per il tracker.
 
 
