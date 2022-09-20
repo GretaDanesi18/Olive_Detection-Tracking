@@ -8,9 +8,12 @@ import cv2
 
 def checking_labels(dir_name):
     path_frame = dir_name
-    path_labels ='labels'
-    path_image = 'dataset_olive_70/images'
-    path_new_labels = 'dataset_olive_70/labels' 
+    #inserire path labels ottenute da SDet
+    path_labels = ''
+    #inserire path images ottenute da SDet
+    path_image = ''
+    #inserire path in cui inserire le labels controllate
+    path_new_labels = '' 
 
 
     try:
